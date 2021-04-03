@@ -1,0 +1,81 @@
+@import 'variables';
+
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: $darkColor;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    margin: 0px;
+    font-size: 35px;
+    text-transform: uppercase;
+    color: $lightColor;
+}
+
+button{
+    font-size: 20px;
+    background-color: rgba(0,0,0,0);
+    color: $lightColor;
+    text-transform: uppercase;
+    border-width: 4px;
+    border-color: $lightColor;
+    border-style: solid;
+    padding: 8px 16px;
+}
+
+p{
+    font-size: 18px;
+    color: $lightColor;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+}
+.paper{
+    width: 496px;
+    height: 560px;
+    position: relative;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0,0,0,0.10);
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.10);
+}
+
+.nav-container{
+    position: relative;
+    top: calc(20% + 24px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    display: flex;
+    align-items: center;
+
+}
+.circle{
+    border-radius: 50%;
+    border-width: 10px ;
+    border-color: $mediumColor;
+    border-style: solid;
+    background-color: $mediumColor;
+    width: 10px;
+    height: 10px;
+    margin: 0px 18px;
+    opacity: 50%;
+    
+    &:hover{
+        opacity: 100%;
+    }
+}
+.line{
+    width: 64px;
+    height: 8px;
+    background-color: $mediumColor;
+    opacity: 50%;
+}
