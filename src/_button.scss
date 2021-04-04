@@ -1,0 +1,48 @@
+button{
+    border: none;
+    position: relative;
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0,0,0,0);
+    color: $lightColor;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    margin: 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+    min-width: 120px;
+    max-width: 120px;
+    box-shadow: $shadow;
+    &:hover{
+        box-shadow: $hoverShadow;
+        color: $darkColor;
+        transition: color 100ms ease-in-out;
+        transition: box-shadow 100ms ease-in-out;
+        .border-left, .border-right{
+            width: 50%;
+            transition: width 100ms ease-in-out;
+        }
+        .border-top, .border-bottom{
+            height: 50%;
+            transition: height 100ms ease-in-out;
+        }
+    }
+    .border-left{
+        @include button-border-side;
+        left: 0;
+    }
+    .border-right{
+        @include button-border-side;
+        right: 0;
+    }
+    .border-top{
+        @include button-border;
+        top: 0;
+    }
+    .border-bottom{
+        @include button-border;
+        bottom: 0;
+    }
+}

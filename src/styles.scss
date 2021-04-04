@@ -1,51 +1,46 @@
 @import 'variables';
+@import 'mixins';
+@import 'button';
+@import 'about';
+@import 'skills';
+@import 'projects';
+@import 'contact';
 
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
 
 body {
-    margin: 0px;
-    padding: 0px;
     background-color: $darkColor;
-    font-family: 'Roboto', sans-serif;
 }
 
+a{
+    text-decoration: none;
+}
 h1{
-    margin: 0px;
-    font-size: 35px;
+    font-size: 32px;
     text-transform: uppercase;
+    font-weight: 500;
     color: $lightColor;
 }
-
-button{
-    font-size: 20px;
-    background-color: rgba(0,0,0,0);
-    color: $lightColor;
-    text-transform: uppercase;
-    border-width: 4px;
-    border-color: $lightColor;
-    border-style: solid;
-    padding: 8px 16px;
-}
-
-p{
+h2{
     font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 300;
     color: $lightColor;
+}
+p{
+    font-size: 16px;
+    font-weight: 300;
+    color: $lightColor;
+    width: 448px;
 }
 
 .container{
     width: 100vw;
-    height: 100vh;
-}
-.paper{
-    width: 496px;
-    height: 560px;
-    position: relative;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0,0,0,0.10);
-    border-radius: 8px;
-    padding: 24px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.10);
 }
 
 .nav-container{
@@ -68,7 +63,6 @@ p{
     height: 10px;
     margin: 0px 18px;
     opacity: 50%;
-    
     &:hover{
         opacity: 100%;
     }
