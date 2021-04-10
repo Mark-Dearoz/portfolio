@@ -1,32 +1,49 @@
 
-
 .projects-paper{
     @include paper;
 }
 
 .project-card-view{
-    width: 448px;
+    width: 512px;
     overflow-x: hidden;
 }
 .project-card-container{
     margin-top: 24px;
     margin-bottom: 16px;
     display: flex;
-    transform: translateX(-448px);
+    transition: transform 200ms ease-in-out
 }
 
 .project-card{
-    width: 448px;
+    width: 512px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    p{
+        width: 512px;
+    }
 }
 
 .project-img{
-    width: 384px;
-    margin-left: 24px;
-    margin-right: 24px;
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
     margin-bottom: 8px;
 }
 
+@media (max-width: 1000px){
+    .project-img{
+        height: 256px;
+        width: auto;
+    }
+}
+
+
+
 .links-container{
+    width: 100%;
     display: flex;
     justify-content: flex-end;
 }
@@ -45,9 +62,11 @@
     background-color: $mediumColor;
     opacity: 50%;
     cursor: pointer;
+    box-shadow: $shadow;
+    transition: opacity 150ms ease-in-out;
 
     &:hover{
         opacity: 100%;
-        transition: opacity 150ms ease-in-out;
+        box-shadow: $hoverShadow;
     }
 }

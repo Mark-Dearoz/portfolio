@@ -6,7 +6,6 @@ button{
     display: flex;
     justify-content: center;
     background-color: rgba(0,0,0,0);
-    color: $lightColor;
     text-transform: uppercase;
     padding: 8px 16px;
     margin: 8px;
@@ -15,20 +14,25 @@ button{
     min-width: 120px;
     max-width: 120px;
     box-shadow: $shadow;
-    &:hover{
+    &:hover, &:focus{
         box-shadow: $hoverShadow;
-        color: $darkColor;
-        transition: color 100ms ease-in-out;
-        transition: box-shadow 100ms ease-in-out;
+        font-weight: 500;
+        outline: none;
+        transition: color 150ms ease-in-out;
+        transition: box-shadow 150ms ease-in-out;
         .border-left, .border-right{
             width: 50%;
-            transition: width 100ms ease-in-out;
+            transition: width 150ms ease-in-out;
         }
         .border-top, .border-bottom{
             height: 50%;
-            transition: height 100ms ease-in-out;
+            transition: height 150ms ease-in-out;
+        }
+        h2{
+            color: $darkColor
         }
     }
+  
     .border-left{
         @include button-border-side;
         left: 0;
@@ -44,5 +48,9 @@ button{
     .border-bottom{
         @include button-border;
         bottom: 0;
+    }
+    h2{
+        color: $lightColor;
+        z-index: 100;
     }
 }
