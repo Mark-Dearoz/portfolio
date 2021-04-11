@@ -8,6 +8,8 @@ const circles  = document.getElementsByClassName("circle")
 const lines = document.getElementsByClassName("line")
 const labels = document.getElementsByClassName("label")
 const dots = document.getElementsByClassName("dot")
+const raindrops = document.getElementsByClassName("raindrop")
+const landingPage = document.getElementsByClassName("landing-page")
 
 circles[0].style.transform = "scale(2,2)"
 circles[0].style.opacity = "100%"
@@ -87,4 +89,13 @@ const dotClick = num => {
             dots[i].style.opacity = "50%"
         }
     }
+}
+
+
+const mainPageTransition = () =>{
+    landingPage[0].style.height = "0%";
+    for(let i = 0; i < raindrops.length; i++){
+        raindrops[i].style.height = '0vh'
+    }
+
 }
