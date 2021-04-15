@@ -1,12 +1,8 @@
 @import 'variables';
-@import 'mixins';
-@import 'button';
+@import 'background';
+@import 'introduction';
 @import 'about';
 @import 'skills';
-@import 'projects';
-@import 'contact';
-@import 'labels';
-@import 'landing';
 
 * {
     margin: 0;
@@ -15,92 +11,91 @@
     box-sizing: border-box;
 }
 
-a{
-    text-decoration: none;
+html{
+    font-size: 24px;
 }
-h1{
-    font-size: 32px;
-    text-transform: uppercase;
-    font-weight: 500;
-    color: $lightColor;
-}
-h2{
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: 500;
-    color: $lightColor;
-}
-p{
-    font-size: 16px;
-    font-weight: 300;
-    color: $lightColor;
-}
-
-.background{
-    position: absolute;
-    bottom: 0;
-    background-image: url("../img/background.jpg");
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-}
-.paper-view{
-    max-width: 560px;
-    min-width: 560px;
-    max-height: 600px;
-    min-height: 600px;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    overflow-x: hidden;
-    box-shadow: $shadow;
-    border-radius: 8px;
-}
-
-.paper-container{
-    display: flex;
-    transition: transform 200ms ease-in-out
-}
-
-
-
-.nav-container{
-    position: absolute;
-    top: calc(20% + 624px);
-    left: 50%;
-    transform: translateX(-50%);
-    width: fit-content;
-    display: flex;
-    align-items: center;
-
-}
-
-.circle{
-    border-radius: 50%;
-    border-color: $mediumColor;
-    border-style: solid;
-    background-color: $mediumColor;
-    width: 15px;
-    height: 15px;
-    margin: 0px 18px;
-    opacity: 50%;
-    transition: transform 100ms ease-in-out;
-    cursor: pointer;
-    box-shadow: $shadow;
-    &:hover{
-        opacity: 100%;
-        transform: scale(2,2);
-        box-shadow: $hoverShadow;
+@media (max-width: 960px){
+    html{
+        font-size: 20px;
     }
 }
-.line{
+@media (max-width: 600px){
+    html{
+        font-size: 16px;
+    }
+}
+
+p{
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(255,255,255,1);
+    line-height: 34px;
+    text-shadow: $textshadow;
+}
+
+h3{
+    font-size: 2rem;
+    font-weight: 600;
+    text-shadow: $textshadow;
+}
+
+h2{
+    font-size: 4rem;
+    font-weight: 600;
+    text-shadow: $textshadow;
+}
+
+h1{
+    font-size: 8rem;
+    font-weight: 700;
+    letter-spacing: -9px;
+    color: rgba(255,255,255,0.75);
+}
+
+button{
+    padding: 6px 16px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 200px;
+    color: rgb(255,255,255);
+    background-color: $complementary;
+    text-shadow: $textshadow;
+}
+
+.paper{
+    width: 1000px;
+    height: 640px;
+    border-radius: 15px;
+    background: linear-gradient(90deg, rgba(0,107,255,0.40) 20%, rgba(209,228,255,0.40) 100%);
+    backdrop-filter: blur(20px);
+    overflow: hidden
+}
+
+
+.paper-title{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+
+}
+
+.square-64{
+    position: absolute;
     width: 64px;
-    height: 8px;
-    background-color: $mediumColor;
+    height: 64px;
     opacity: 50%;
-    box-shadow: $shadow;
-    transition: opacity 100ms ease-in-out;
+    margin-left: 130px;
+    margin-top: 724px;
+    background-color: gray;
+}
+
+.square-16{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    opacity: 50%;
+    margin-left: 130px;
+    margin-top: 572px;
+    background-color: gray;
 }

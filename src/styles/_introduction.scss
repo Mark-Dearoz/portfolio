@@ -1,0 +1,25 @@
+
+.introduction{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2{
+        margin-bottom: 21px;
+    }
+    opacity: 0%;
+}
+.intro-button{
+    padding: 6px 16px;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: $complementary;
+    color: $complementary;
+    background-color: rgba(0,0,0,0);
+    font-weight: 600;
+    margin-top: 20px;
+}
