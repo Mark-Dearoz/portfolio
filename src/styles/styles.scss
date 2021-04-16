@@ -1,83 +1,20 @@
-@import 'variables';
-@import 'background';
-@import 'introduction';
-@import 'about';
-@import 'skills';
+@use 'abstract/' as *;
+@use 'components/background';
+@use 'components/introduction';
+@use 'components/about';
+@use 'components/skills';
+@use 'components/works';
+@use 'components/contact';
+@use 'components/nav';
+@use 'components/text';
+@use 'components/button';
+@use 'components/paper';
 
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: $font-family;
     box-sizing: border-box;
-}
-
-html{
-    font-size: 24px;
-}
-@media (max-width: 960px){
-    html{
-        font-size: 20px;
-    }
-}
-@media (max-width: 600px){
-    html{
-        font-size: 16px;
-    }
-}
-
-p{
-    font-size: 1rem;
-    font-weight: 500;
-    color: rgba(255,255,255,1);
-    line-height: 34px;
-    text-shadow: $textshadow;
-}
-
-h3{
-    font-size: 2rem;
-    font-weight: 600;
-    text-shadow: $textshadow;
-}
-
-h2{
-    font-size: 4rem;
-    font-weight: 600;
-    text-shadow: $textshadow;
-}
-
-h1{
-    font-size: 8rem;
-    font-weight: 700;
-    letter-spacing: -9px;
-    color: rgba(255,255,255,0.75);
-}
-
-button{
-    padding: 6px 16px;
-    border: none;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 200px;
-    color: rgb(255,255,255);
-    background-color: $complementary;
-    text-shadow: $textshadow;
-}
-
-.paper{
-    width: 1000px;
-    height: 640px;
-    border-radius: 15px;
-    background: linear-gradient(90deg, rgba(0,107,255,0.40) 20%, rgba(209,228,255,0.40) 100%);
-    backdrop-filter: blur(20px);
-    overflow: hidden
-}
-
-
-.paper-title{
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-
 }
 
 .square-64{
@@ -88,6 +25,7 @@ button{
     margin-left: 130px;
     margin-top: 724px;
     background-color: gray;
+    opacity: 0%;
 }
 
 .square-16{
@@ -95,7 +33,8 @@ button{
     width: 16px;
     height: 16px;
     opacity: 50%;
-    margin-left: 130px;
-    margin-top: 572px;
+    margin-left: 680px;
+    margin-top: 936px;
     background-color: gray;
+    opacity: 0%;
 }

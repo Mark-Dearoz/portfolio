@@ -1,0 +1,25 @@
+@use '../abstract/' as *;
+
+button{
+    padding: 6px 16px;
+    border-radius: 200px;
+    font-size: $p;
+    font-weight: $bold;
+    text-shadow: $text-shadow;
+    box-shadow: $text-shadow;
+}
+
+.primary-button{
+    border: none;
+    background-color: $complementary;
+    color: $light;
+}
+
+.secondary-button{
+    margin-top: 20px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: $complementary;
+    color: $complementary;
+    background-color: $transparent;
+}

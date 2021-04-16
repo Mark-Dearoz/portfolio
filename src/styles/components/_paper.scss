@@ -1,0 +1,11 @@
+@use '../abstract/' as *;
+
+
+.paper{
+    width: 1000px;
+    height: 640px;
+    border-radius: 15px;
+    background: $paper-gradient;
+    backdrop-filter: blur(20px);
+    overflow: hidden
+}

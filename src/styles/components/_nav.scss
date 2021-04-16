@@ -1,0 +1,48 @@
+@use "../abstract/" as *;
+
+.nav{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+.nav-circle-container{
+    position: absolute;
+    top: 50%;
+    left: calc(50% + 524px);
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+.nav-circle1{
+    width: 24px;
+    height: 24px;
+    background-color: $complementary;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    opacity: 50%;
+}
+.nav-circle2{
+    width: 24px;
+    height: 24px;
+    background-color: $complementary;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    opacity: 100%;
+}
+.nav-circle3{
+    width: 24px;
+    height: 24px;
+    background-color: $complementary;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    opacity: 50%;
+}
+.nav-circle4{
+    width: 24px;
+    height: 24px;
+    background-color: $complementary;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    opacity: 50%;
+}

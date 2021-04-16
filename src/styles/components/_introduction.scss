@@ -1,0 +1,15 @@
+@use '../abstract/' as *;
+
+.introduction{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0%;
+    h2{
+        margin-bottom: 21px;
+    }
+}

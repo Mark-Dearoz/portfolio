@@ -1,4 +1,4 @@
-
+@use '../abstract/' as *;
 
 .about{
     position: absolute;
@@ -12,7 +12,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        transform: rotate(90deg)  translateX(140px) translateY(172px);
+        transform: rotate(90deg) translateX(140px) translateY(172px);
     }
 }
 
