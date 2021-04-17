@@ -1,23 +1,28 @@
 @use '../abstract/' as *;
 
-html{font-size: $big;}
+html{font-size: $big-font;}
 
 @media (max-width: $tablet){
-    html{font-size: $medium;}
+    html{font-size: $medium-font;}
 }
 
 @media (max-width: $mobile){
-    html{font-size: $small;}
+    html{font-size: $small-font;}
 }
 
 p{
     font-size: $p;
-    font-weight: $medium;
+    font-weight: $regular;
     color: $light;
     text-shadow: $text-shadow;
     line-height: 34px;
 }
 
+@media (max-width: $mobile){
+    p{
+        line-height: 20px;
+    }
+}
 h3{
     font-size: $h3;
     font-weight: $bold;

@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0%;
+    
     h1{
         position: absolute;
         top: 0;
@@ -46,40 +46,50 @@
     width: 200px;
     height: 200px;
 }
-.circle-progress-1{
+.circle-progress{
     transform: rotate(-90deg);
     transform-origin: 50% 50%;
     stroke-dasharray: calc(100 * 2 * 3.14) ;
-    stroke-dashoffset: calc(100 * 2 * 3.14 - ( 90 / 100 * 100 * 2 * 3.14));
-}
-.circle-progress-2{
-    transform: rotate(-90deg);
-    transform-origin: 50% 50%;
-    stroke-dasharray: calc(100 * 2 * 3.14) ;
-    stroke-dashoffset: calc(100 * 2 * 3.14 - ( 90 / 100 * 100 * 2 * 3.14));
-}
-.circle-progress-3{
-    transform: rotate(-90deg);
-    transform-origin: 50% 50%;
-    stroke-dasharray: calc(100 * 2 * 3.14) ;
-    stroke-dashoffset: calc(100 * 2 * 3.14 - ( 75 / 100 * 100 * 2 * 3.14));
-}
-.circle-progress-4{
-    transform: rotate(-90deg);
-    transform-origin: 50% 50%;
-    stroke-dasharray: calc(100 * 2 * 3.14) ;
-    stroke-dashoffset: calc(100 * 2 * 3.14 - ( 75 / 100 * 100 * 2 * 3.14));
-}
-.circle-progress-5{
-    transform: rotate(-90deg);
-    transform-origin: 50% 50%;
-    stroke-dasharray: calc(100 * 2 * 3.14) ;
-    stroke-dashoffset: calc(100 * 2 * 3.14 - ( 65 / 100 * 100 * 2 * 3.14));
-}
-.circle-progress-6{
-    transform: rotate(-90deg);
-    transform-origin: 50% 50%;
-    stroke-dasharray: calc(100 * 2 * 3.14) ;
-    stroke-dashoffset: calc(100 * 2 * 3.14 - ( 80 / 100 * 100 * 2 * 3.14));
+    stroke-dashoffset: calc(100 * 2 * 3.14 - ( 100 / 100 * 100 * 2 * 3.14));
 }
 
+@media (max-width: $tablet){
+    .skills{
+        h1{
+            transform: rotate(90deg) translateX(100px) translateY(115px);
+        }
+    }
+    .skills-content{
+        padding: 48px;
+    }
+    .circle-bar{
+        width: 180px;
+        height: 180px;
+    }
+    .circle-progress{
+        stroke-dasharray: calc(90 * 2 * 3.14) ;
+        stroke-dashoffset: calc(90 * 2 * 3.14 - ( 50 / 100 * 90 * 2 * 3.14));
+    }
+}
+
+@media (max-width: $mobile){
+    .skills{
+        h1{
+            transform: rotate(90deg) translateX(100px) translateY(78px);
+        }
+    }
+    .skills-content{
+        padding: 128px 8px;
+        grid-template-columns: 1fr 1fr;
+        justify-content: flex-end;
+        justify-items: center;
+    }
+    .circle-bar{
+        width: 120px;
+        height: 120px;
+    }
+    .circle-progress{
+        stroke-dasharray: calc(60 * 2 * 3.14) ;
+        stroke-dashoffset: calc(60 * 2 * 3.14 - ( 90 / 100 * 60 * 2 * 3.14));
+    }
+}

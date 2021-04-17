@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 100%;
+    
     h1{
         position: absolute;
         top: 0;
@@ -30,6 +30,7 @@ form{
     width: 480px;
     display: flex;
     flex-direction: column;
+    z-index: 1;
 }
 
 input{
@@ -73,5 +74,27 @@ textarea{
     
     &::placeholder{
         color: $light
+    }
+}
+
+@media (max-width: $tablet){
+    .contact{
+        h1{
+            transform: rotate(90deg) translateX(160px) translateY(195px);
+        }
+    }
+    .contact-content{
+        padding: 48px;
+    }
+}
+
+@media (max-width: $mobile){
+    .contact{
+        h1{
+            transform: rotate(90deg) translateX(120px) translateY(148px);
+        }
+    }
+    .contact-content{
+        padding: 32px;
     }
 }

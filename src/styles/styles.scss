@@ -1,4 +1,5 @@
 @use 'abstract/' as *;
+@use 'components/text';
 @use 'components/background';
 @use 'components/introduction';
 @use 'components/about';
@@ -6,7 +7,6 @@
 @use 'components/works';
 @use 'components/contact';
 @use 'components/nav';
-@use 'components/text';
 @use 'components/button';
 @use 'components/paper';
 
@@ -17,24 +17,3 @@
     box-sizing: border-box;
 }
 
-.square-64{
-    position: absolute;
-    width: 64px;
-    height: 64px;
-    opacity: 50%;
-    margin-left: 130px;
-    margin-top: 724px;
-    background-color: gray;
-    opacity: 0%;
-}
-
-.square-16{
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    opacity: 50%;
-    margin-left: 680px;
-    margin-top: 936px;
-    background-color: gray;
-    opacity: 0%;
-}

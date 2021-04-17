@@ -14,35 +14,24 @@
     display: flex;
     flex-direction: column;
 }
-.nav-circle1{
-    width: 24px;
-    height: 24px;
+.nav-circle{
+    width: 1rem;
+    height: 1rem;
     background-color: $complementary;
     border-radius: 50%;
     margin-bottom: 8px;
     opacity: 50%;
 }
-.nav-circle2{
-    width: 24px;
-    height: 24px;
-    background-color: $complementary;
-    border-radius: 50%;
-    margin-bottom: 8px;
-    opacity: 100%;
-}
-.nav-circle3{
-    width: 24px;
-    height: 24px;
-    background-color: $complementary;
-    border-radius: 50%;
-    margin-bottom: 8px;
-    opacity: 50%;
-}
-.nav-circle4{
-    width: 24px;
-    height: 24px;
-    background-color: $complementary;
-    border-radius: 50%;
-    margin-bottom: 8px;
-    opacity: 50%;
+
+@media (max-width: $tablet){
+    .nav-circle-container{
+        flex-direction: row;
+        top: calc(50% + 328px);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .nav-circle{
+        margin-left: 8px;
+    }
+
 }

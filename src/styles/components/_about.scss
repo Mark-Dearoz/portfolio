@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0%;
+
     h1{
         position: absolute;
         top: 0;
@@ -17,7 +17,7 @@
 }
 
 
-.circle{
+.about-circle{
     position: absolute;
     bottom: 0;
     transform: translateX(-80px) translateY(80px);
@@ -27,10 +27,12 @@
     border-radius: 50%;
 }
 
-img{
+.about-img{
     position: absolute;
     bottom: 0;
 }
+
+
 .about-content{
     position: absolute;
     top: 0;
@@ -54,6 +56,7 @@ img{
 }
 
 .button-container{
+    margin-top: 8px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -63,4 +66,67 @@ img{
     margin-left: 16px;
     width: 40px;
     height: 40px;
+}
+@media (max-width: $tablet){
+    .about{
+        h1{
+            transform: rotate(90deg) translateX(110px) translateY(140px);
+        }
+    }
+
+    .about-img{
+        width: 400px;
+    }
+    .about-circle{
+        transform: translateX(-40px) translateY(80px);
+        width: 440px;
+        height: 440px;
+    }
+    
+    .text-container{
+        p{
+            width: 600px;
+        }
+    }
+    .about-content{
+        padding: 48px;
+    }
+}
+
+@media (max-width: $mobile){
+    .about{
+        h1{
+            transform: rotate(90deg) translateX(136px) translateY(98px);
+        }
+    }
+
+    .about-img{
+        width: 280px;
+        position: relative;
+    }
+
+    .about-circle{
+        position: relative;
+        transform: translateX(-50px) translateY(360px);
+        width: 320px;
+        height: 320px;
+    }
+    .about-content{
+        justify-content: flex-start;
+        padding: 64px;
+    }
+    .text-container{
+        h3{
+            margin-left: 0px;
+            margin-bottom: 20px;
+        }
+        p{
+            width: auto;
+        }
+    }
+
+    .github{
+        width: 30px;
+        height: 30px;
+    }
 }
