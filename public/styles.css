@@ -155,7 +155,6 @@ h1 {
   }
 
   .about-circle {
-    transform: translateX(-40px) translateY(80px);
     width: 440px;
     height: 440px;
   }
@@ -170,17 +169,14 @@ h1 {
 }
 @media (max-width: 600px) {
   .about h1 {
-    transform: rotate(90deg) translateX(136px) translateY(98px);
+    transform: rotate(90deg) translateX(90px) translateY(110px);
   }
 
   .about-img {
     width: 280px;
-    position: relative;
   }
 
   .about-circle {
-    position: relative;
-    transform: translateX(-50px) translateY(360px);
     width: 320px;
     height: 320px;
   }
@@ -257,7 +253,7 @@ h1 {
 
 @media (max-width: 1200px) {
   .skills h1 {
-    transform: rotate(90deg) translateX(100px) translateY(115px);
+    transform: rotate(90deg) translateX(80px) translateY(115px);
   }
 
   .skills-content {
@@ -276,7 +272,7 @@ h1 {
 }
 @media (max-width: 600px) {
   .skills h1 {
-    transform: rotate(90deg) translateX(100px) translateY(78px);
+    transform: rotate(90deg) translateX(60px) translateY(88px);
   }
 
   .skills-content {
@@ -314,7 +310,7 @@ h1 {
 .works-circle {
   position: absolute;
   right: 64px;
-  bottom: 64px;
+  top: 64px;
   width: 400px;
   height: 400px;
   background-color: #ffa366;
@@ -367,7 +363,7 @@ h1 {
 .works-nav {
   position: absolute;
   display: flex;
-  bottom: 64px;
+  bottom: 8px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -396,14 +392,10 @@ h1 {
   .works-circle {
     right: 48px;
   }
-
-  .works-nav {
-    bottom: 48px;
-  }
 }
 @media (max-width: 600px) {
   .works h1 {
-    transform: rotate(90deg) translateX(140px) translateY(107px);
+    transform: rotate(90deg) translateX(90px) translateY(118px);
   }
 
   .works-content {
@@ -435,10 +427,6 @@ h1 {
     top: 64px;
     right: 8px;
     z-index: 0;
-  }
-
-  .works-nav {
-    top: calc(50% + 298px);
   }
 }
 .contact {
@@ -523,7 +511,7 @@ textarea::placeholder {
 }
 @media (max-width: 600px) {
   .contact h1 {
-    transform: rotate(90deg) translateX(120px) translateY(148px);
+    transform: rotate(90deg) translateX(115px) translateY(150px);
   }
 
   .contact-content {
@@ -591,6 +579,7 @@ button {
 }
 
 .paper {
+  position: relative;
   width: 1000px;
   height: 640px;
   border-radius: 15px;

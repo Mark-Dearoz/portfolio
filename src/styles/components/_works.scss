@@ -20,7 +20,7 @@
 .works-circle{
     position: absolute;
     right: 64px;
-    bottom: 64px;
+    top: 64px;
     width: 400px;
     height: 400px;
     background-color: $complementary;
@@ -74,7 +74,7 @@
 .works-nav{
     position: absolute;
     display: flex;
-    bottom: 64px;
+    bottom: 8px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -101,15 +101,12 @@
     .works-circle{
         right: 48px;
     }
-    .works-nav{
-        bottom: 48px;
-    }
 }
 
 @media (max-width: $mobile){
     .works{
         h1{
-            transform: rotate(90deg) translateX(140px) translateY(107px);
+            transform: rotate(90deg) translateX(90px) translateY(118px);
         }
     }
     .works-content{
@@ -138,8 +135,5 @@
         top: 64px;
         right: 8px;
         z-index: 0;
-    }
-    .works-nav{
-        top: calc(50% + 298px);
     }
 }
