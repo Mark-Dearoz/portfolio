@@ -1,6 +1,13 @@
 @use '../abstract/' as *;
 
-
+.paper-container{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .paper{
     position: relative;
     width: 1000px;
@@ -12,3 +19,28 @@
     margin: 8px;
 }
 
+.content-container{
+    position: relative;
+    width: 1000px;
+    height: 640px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.view-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-view{
+    max-width: 1000px;
+    width: 100%;
+    height: 640px;
+    overflow: hidden;
+}
+
+.section-container{
+    transform: translateY(0px);
+}

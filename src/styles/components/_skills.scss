@@ -1,9 +1,7 @@
 @use '../abstract/' as *;
 
 .skills{
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +10,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        transform: rotate(90deg) translateX(100px) translateY(144px);
+        transform-origin: top left;
+        transform: rotate(90deg) translateY(-178px);
     }
 }
 
@@ -50,13 +49,13 @@
     transform: rotate(-90deg);
     transform-origin: 50% 50%;
     stroke-dasharray: calc(100 * 2 * 3.14) ;
-    stroke-dashoffset: calc(100 * 2 * 3.14 - ( 100 / 100 * 100 * 2 * 3.14));
+    stroke-dashoffset: calc(100 * 2 * 3.14 - ( 90 / 100 * 100 * 2 * 3.14));
 }
 
 @media (max-width: $tablet){
     .skills{
         h1{
-            transform: rotate(90deg) translateX(80px) translateY(115px);
+            transform: rotate(90deg) translateY(-148px);
         }
     }
     .skills-content{
@@ -75,7 +74,7 @@
 @media (max-width: $mobile){
     .skills{
         h1{
-            transform: rotate(90deg) translateX(60px) translateY(88px);
+            transform: rotate(90deg) translateY(-118px);
         }
     }
     .skills-content{
@@ -85,11 +84,11 @@
         justify-items: center;
     }
     .circle-bar{
-        width: 120px;
-        height: 120px;
+        width: 140px;
+        height: 140px;
     }
     .circle-progress{
-        stroke-dasharray: calc(60 * 2 * 3.14) ;
-        stroke-dashoffset: calc(60 * 2 * 3.14 - ( 90 / 100 * 60 * 2 * 3.14));
+        stroke-dasharray: calc(70 * 2 * 3.14) ;
+        stroke-dashoffset: calc(70 * 2 * 3.14 - ( 90 / 100 * 70 * 2 * 3.14));
     }
 }

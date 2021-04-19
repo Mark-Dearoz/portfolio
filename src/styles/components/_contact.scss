@@ -1,9 +1,7 @@
 @use '../abstract/' as *;
 
 .contact{
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +10,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        transform: rotate(90deg) translateX(188px) translateY(240px);
+        transform-origin: top left;
+        transform: rotate(90deg) translateY(-178px);
     }
 }
 
@@ -80,7 +79,7 @@ textarea{
 @media (max-width: $tablet){
     .contact{
         h1{
-            transform: rotate(90deg) translateX(160px) translateY(195px);
+            transform: rotate(90deg) translateY(-148px);
         }
     }
     .contact-content{
@@ -91,7 +90,7 @@ textarea{
 @media (max-width: $mobile){
     .contact{
         h1{
-            transform: rotate(90deg) translateX(115px) translateY(150px);
+            transform: rotate(90deg) translateY(-118px);
         }
     }
     .contact-content{

@@ -1,18 +1,18 @@
 @use '../abstract/' as *;
 
 .about{
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
     h1{
         position: absolute;
         top: 0;
         left: 0;
-        transform: rotate(90deg) translateX(140px) translateY(172px);
+        transform-origin: top left;
+        transform: rotate(90deg) translateY(-178px);
     }
 }
 
@@ -71,7 +71,7 @@
 @media (max-width: $tablet){
     .about{
         h1{
-            transform: rotate(90deg) translateX(110px) translateY(140px);
+            transform: rotate(90deg) translateY(-148px);
         }
     }
 
@@ -97,7 +97,7 @@
 @media (max-width: $mobile){
     .about{
         h1{
-            transform: rotate(90deg) translateX(90px) translateY(110px);
+            transform: rotate(90deg) translateY(-118px);
         }
     }
 

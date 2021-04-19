@@ -2,9 +2,7 @@
 
 
 .works{
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,8 +11,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        transform: rotate(90deg) translateX(140px) translateY(184px);
-
+        transform-origin: top left;
+        transform: rotate(90deg) translateY(-178px);
     }
 }
 .works-circle{
@@ -89,7 +87,7 @@
 @media (max-width: $tablet){
     .works{
         h1{
-            transform: rotate(90deg) translateX(110px) translateY(155px);
+            transform: rotate(90deg) translateY(-148px);
         }
     }
     .works-content{
@@ -106,7 +104,7 @@
 @media (max-width: $mobile){
     .works{
         h1{
-            transform: rotate(90deg) translateX(90px) translateY(118px);
+            transform: rotate(90deg) translateY(-118px);
         }
     }
     .works-content{
