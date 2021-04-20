@@ -89,12 +89,13 @@ h1 {
   align-items: center;
   overflow: hidden;
 }
-.about h1 {
+
+.about-h1 {
   position: absolute;
   top: 0;
   left: 0;
   transform-origin: top left;
-  transform: rotate(90deg) translateY(-178px);
+  transform: rotate(90deg) translateY(-178px) translateX(640px);
 }
 
 .about-circle {
@@ -105,11 +106,13 @@ h1 {
   height: 500px;
   background-color: #ffa366;
   border-radius: 50%;
+  opacity: 0%;
 }
 
 .about-img {
   position: absolute;
   bottom: 0;
+  opacity: 0%;
 }
 
 .about-content {
@@ -128,8 +131,10 @@ h1 {
   margin-left: 128px;
   margin-bottom: 45px;
 }
-.text-container p {
+
+.about-p {
   width: 660px;
+  transform: translateX(960px);
 }
 
 .button-container {
@@ -137,6 +142,7 @@ h1 {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  transform: translateX(300px);
 }
 
 .github {
@@ -618,6 +624,7 @@ button {
   max-width: 1000px;
   width: 100%;
   height: 640px;
+  margin: 8px;
   overflow: hidden;
 }
 

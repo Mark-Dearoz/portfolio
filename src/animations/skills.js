@@ -9,15 +9,15 @@ const circleTitles = document.getElementsByClassName("circle-title")
 
 export const animateSkills = () =>{
     for(let i = 0; i < circleBars.length; i++){
-        circleBars[i].style.transition = "opacity 200ms ease-in-out 750ms"
+        circleBars[i].style.transition = "opacity 200ms ease-in-out 100ms"
         circleTitles[i].style.transition = "opacity 500ms ease-in-out"
-        circleTitles[i].style.transitionDelay = `${((i+1) * 125) + 750}ms`
+        circleTitles[i].style.transitionDelay = `${((i+1) * 125) + 1000}ms`
         circleBars[i].style.opacity = "100%"
         circleTitles[i].style.opacity = "100%"
     }
     for(let i = 0; i < circleProgressBars.length; i++){
         circleProgressBars[i].style.transition = "stroke-dashoffset 200ms ease-in-out"
-        circleProgressBars[i].style.transitionDelay = `${((i+1) * 125) + 750}ms`
+        circleProgressBars[i].style.transitionDelay = `${((i+1) * 125) + 1000}ms`
         circleProgressBars[i].style.strokeDashoffset = (100 * 2 * 3.14 - (PERCENT[i] / 100 * 100 * 2 * 3.14))
         
     }
@@ -57,5 +57,4 @@ export const deanimateSkills = () => {
     if(windowWidth <= 600){
         h1[0].style.transform = "rotate(90deg) translateY(-118px) translateX(640px)"
     }
-
 }
