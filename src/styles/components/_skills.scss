@@ -5,16 +5,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    h1{
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform-origin: top left;
-        transform: rotate(90deg) translateY(-178px);
-    }
 }
 
+.skills-h1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: top left;
+    transition: transform 200ms ease-in-out;    
+    transform: rotate(90deg) translateY(-178px) translateX(640px);
+}
 .skills-content{
     position: absolute;
     top: 0;
@@ -30,33 +30,33 @@
     position: relative;
     max-width: 248px;
     max-height: 248px;
-    
-    h3{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        color: rgb(255,255,255);
-        
-    }
- 
+}
+.circle-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: rgb(255,255,255);
+    opacity: 0%;
 }
 .circle-bar{
     width: 200px;
     height: 200px;
+    opacity: 0%;
+    transition: opacity 200ms ease-in-out;
 }
 .circle-progress{
     transform: rotate(-90deg);
     transform-origin: 50% 50%;
-    stroke-dasharray: calc(100 * 2 * 3.14) ;
-    stroke-dashoffset: calc(100 * 2 * 3.14 - ( 90 / 100 * 100 * 2 * 3.14));
+    stroke-dasharray: 628;
+    transition: stroke-dashoffset 200ms ease-in-out;
+    stroke-dashoffset: 628;
 }
 
 @media (max-width: $tablet){
-    .skills{
-        h1{
-            transform: rotate(90deg) translateY(-148px);
-        }
+    
+    .skills-h1 {
+        transform: rotate(90deg) translateY(-148px) translateX(640px);
     }
     .skills-content{
         padding: 48px;
@@ -65,17 +65,12 @@
         width: 180px;
         height: 180px;
     }
-    .circle-progress{
-        stroke-dasharray: calc(90 * 2 * 3.14) ;
-        stroke-dashoffset: calc(90 * 2 * 3.14 - ( 50 / 100 * 90 * 2 * 3.14));
-    }
 }
 
 @media (max-width: $mobile){
-    .skills{
-        h1{
-            transform: rotate(90deg) translateY(-118px);
-        }
+    
+    .skills-h1 {
+        transform: rotate(90deg) translateY(-118px) translateX(640px);
     }
     .skills-content{
         padding: 128px 8px;
@@ -86,9 +81,5 @@
     .circle-bar{
         width: 140px;
         height: 140px;
-    }
-    .circle-progress{
-        stroke-dasharray: calc(70 * 2 * 3.14) ;
-        stroke-dashoffset: calc(70 * 2 * 3.14 - ( 90 / 100 * 70 * 2 * 3.14));
     }
 }
