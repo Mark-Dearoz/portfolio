@@ -6,13 +6,14 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    h1{
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform-origin: top left;
-        transform: rotate(90deg) translateY(-178px);
-    }
+}
+.contact-h1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: top left;
+    transition: transform 200ms ease-in-out;
+    transform: rotate(90deg) translateY(-178px) translateX(640px);
 }
 
 .contact-content{
@@ -37,9 +38,10 @@ input{
     border-radius: 200px;
     margin-bottom: 16px;
     border: none;
-    background: $form-gradient;
+    background: $form-color;
     color: $light;
     font-size: 1rem;
+    transform: translateX(550px);
 
     &:focus{
         outline: none;
@@ -60,9 +62,10 @@ textarea{
     height: 340px;
     resize: none;
     border: none;
-    background: $form-gradient;
+    background: $form-color;
     color: $light;
     font-size: 1rem;
+    transform: translateX(550px);
 
     &:focus{
         outline: none;
@@ -76,11 +79,13 @@ textarea{
     }
 }
 
+#submit{
+    transform: translateX(550px);
+}
+
 @media (max-width: $tablet){
-    .contact{
-        h1{
-            transform: rotate(90deg) translateY(-148px);
-        }
+    .contact-h1{
+        transform: rotate(90deg) translateY(-148px) translateX(640px);
     }
     .contact-content{
         padding: 48px;
@@ -88,10 +93,8 @@ textarea{
 }
 
 @media (max-width: $mobile){
-    .contact{
-        h1{
-            transform: rotate(90deg) translateY(-118px);
-        }
+    .contact-h1{
+        transform: rotate(90deg) translateY(-118px) translateX(640px);
     }
     .contact-content{
         padding: 32px;

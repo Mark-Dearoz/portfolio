@@ -2,6 +2,7 @@ import {animateAbout, deanimateAbout} from './animations/about.js'
 import {animateSkills, deanimateSkills} from './animations/skills.js'
 import {animateWorks, deanimateWorks} from './animations/works.js'
 import {animateCard, deanimateCard} from './animations/works.js'
+import {animateContact, deanimateContact} from './animations/contact.js'
 
 const HEIGHT = 640;
 const navCircles = document.getElementsByClassName("nav-circle")
@@ -27,22 +28,26 @@ const navCircleClickHandler = index => {
     if(index === 0){
         deanimateSkills()
         deanimateWorks(currCard)
+        deanimateContact()
         animateAbout()
     }
     if(index === 1){
         deanimateAbout()
         deanimateWorks(currCard)
+        deanimateContact()
         animateSkills()
     }
     if(index === 2){
         deanimateAbout()
         deanimateSkills()
+        deanimateContact()
         animateWorks(currCard)
     }
     if(index === 3){
         deanimateAbout()
         deanimateSkills()
         deanimateWorks(currCard)
+        animateContact()
     }
 }
 
