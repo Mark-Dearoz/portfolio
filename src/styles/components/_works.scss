@@ -6,14 +6,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    h1{
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform-origin: top left;
-        transform: rotate(90deg) translateY(-178px);
-    }
+}
+
+.works-h1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: top left;
+    transform: rotate(90deg) translateY(-178px) translateX(640px);
 }
 .works-circle{
     position: absolute;
@@ -36,37 +36,34 @@
 
 .works-content{
     width: 100%;
-    height: 100%;
-    padding: 64px;
+    display: flex;
+    flex-direction: column;
+    transition-delay: 1000ms;
 }
 
-.fitness-tracker{
-    position: absolute;
-    width: 540px;
-    height: 540px;
-    right: 64px;
-}
 .works-card{
     width: 100%;
-    height: 100%;
+    height: 640px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    h3{
-        color: $complementary;
-        margin-bottom: 45px;
-    }
-
-    p{
-        width: 510px;
-    }
+}
+.work-title{
+    color: $complementary;
+    margin-bottom: 45px;
+    transform: translateX(900px);
+}
+.work-description{
+    width: 510px;
+    transform: translateX(900px);
 }
 
-.works-links{
+.work-links{
     display: flex;
     margin-top: 7px;
+    transform: translateX(900px);
 }
 
 .works-nav{
@@ -75,13 +72,21 @@
     bottom: 8px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 100px;
 }
+
 .works-nav-circle{
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
     background-color: $complementary;
     margin-left: 8px;
+    opacity: 50%;
+    cursor: pointer;
+    transition: opacity 200ms ease-in-out;
+    &:hover{
+        opacity: 100%;
+    }
 }
 
 @media (max-width: $tablet){

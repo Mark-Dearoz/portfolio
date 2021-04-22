@@ -14,7 +14,6 @@
     height: 640px;
     border-radius: 15px;
     background: $paper-gradient;
-    backdrop-filter: blur(20px);
     overflow: hidden;
     margin: 8px;
 }
@@ -40,6 +39,7 @@
     height: 640px;
     margin: 8px;
     overflow: hidden;
+    z-index: 1000;
 }
 
 .section-container{

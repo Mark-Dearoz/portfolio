@@ -40,7 +40,7 @@ h2 {
 h1 {
   font-size: 8rem;
   font-weight: 700;
-  color: white;
+  color: #0a0a0a;
   opacity: 75%;
   letter-spacing: -9px;
 }
@@ -49,7 +49,7 @@ h1 {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(45deg, #dbdbdb 0%, #fbfbfb 50%, #dbdbdb 100%);
+  background: radial-gradient(#434343 0%, #0a0a0a 100%);
 }
 
 .background-top {
@@ -113,6 +113,7 @@ h1 {
   position: absolute;
   bottom: 0;
   opacity: 0%;
+  width: 460px;
 }
 
 .about-content {
@@ -300,12 +301,13 @@ h1 {
   justify-content: center;
   align-items: center;
 }
-.works h1 {
+
+.works-h1 {
   position: absolute;
   top: 0;
   left: 0;
   transform-origin: top left;
-  transform: rotate(90deg) translateY(-178px);
+  transform: rotate(90deg) translateY(-178px) translateX(640px);
 }
 
 .works-circle {
@@ -329,36 +331,35 @@ h1 {
 
 .works-content {
   width: 100%;
-  height: 100%;
-  padding: 64px;
-}
-
-.fitness-tracker {
-  position: absolute;
-  width: 540px;
-  height: 540px;
-  right: 64px;
+  display: flex;
+  flex-direction: column;
+  transition-delay: 1000ms;
 }
 
 .works-card {
   width: 100%;
-  height: 100%;
+  height: 640px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.works-card h3 {
+
+.work-title {
   color: #ffa366;
   margin-bottom: 45px;
-}
-.works-card p {
-  width: 510px;
+  transform: translateX(900px);
 }
 
-.works-links {
+.work-description {
+  width: 510px;
+  transform: translateX(900px);
+}
+
+.work-links {
   display: flex;
   margin-top: 7px;
+  transform: translateX(900px);
 }
 
 .works-nav {
@@ -367,6 +368,7 @@ h1 {
   bottom: 8px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 100px;
 }
 
 .works-nav-circle {
@@ -375,6 +377,12 @@ h1 {
   border-radius: 50%;
   background-color: #ffa366;
   margin-left: 8px;
+  opacity: 50%;
+  cursor: pointer;
+  transition: opacity 200ms ease-in-out;
+}
+.works-nav-circle:hover {
+  opacity: 100%;
 }
 
 @media (max-width: 1200px) {
@@ -435,6 +443,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 .contact h1 {
   position: absolute;
@@ -457,7 +466,7 @@ form {
   width: 480px;
   display: flex;
   flex-direction: column;
-  z-index: 1;
+  z-index: 1000;
 }
 
 input {
@@ -598,8 +607,7 @@ button {
   width: 1000px;
   height: 640px;
   border-radius: 15px;
-  background: linear-gradient(90deg, rgba(0, 107, 255, 0.4) 20%, rgba(209, 228, 255, 0.4) 100%);
-  backdrop-filter: blur(20px);
+  background: linear-gradient(-90deg, rgba(255, 255, 255, 0.2) 0%, rgba(148, 148, 148, 0.25) 75%);
   overflow: hidden;
   margin: 8px;
 }
@@ -626,6 +634,7 @@ button {
   height: 640px;
   margin: 8px;
   overflow: hidden;
+  z-index: 1000;
 }
 
 .section-container {
