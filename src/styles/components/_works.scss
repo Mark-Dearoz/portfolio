@@ -84,9 +84,15 @@
     opacity: 50%;
     cursor: pointer;
     transition: opacity 200ms ease-in-out;
+    box-shadow: $box-shadow;
     &:hover{
         opacity: 100%;
+        box-shadow: $hover-shadow;
     }
+}
+
+.works-nav-circle.active{
+    opacity: 100%
 }
 
 @media (max-width: $tablet){

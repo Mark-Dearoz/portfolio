@@ -6,20 +6,26 @@ button{
     font-size: $p;
     font-weight: $bold;
     text-shadow: $text-shadow;
-    box-shadow: $text-shadow;
+    box-shadow: $box-shadow;
+    outline: none;
+    cursor: pointer;
+
+    &:hover, &:focus{
+        box-shadow: $hover-shadow;
+    }
 }
 
-.primary-button{
+.button.primary{
     border: none;
     background-color: $complementary;
     color: $light;
 }
 
-.secondary-button{
+.button.secondary{
     margin-top: 20px;
     border-width: 8px;
     border-style: solid;
-    border-color: $complementary;
+    border-color: $complementary; 
     color: $complementary;
     background-color: $transparent;
 }

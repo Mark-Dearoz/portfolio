@@ -70,6 +70,11 @@
     margin-left: 16px;
     width: 40px;
     height: 40px;
+    filter: drop-shadow($box-shadow);
+    cursor: pointer;
+    &:hover{
+        filter: drop-shadow($hover-shadow);
+    }
 }
 
 @media (max-width: $tablet){

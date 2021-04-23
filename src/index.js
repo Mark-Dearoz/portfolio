@@ -10,20 +10,17 @@ const sectionContainer = document.getElementsByClassName("section-container")
 const worksNavCircles = document.getElementsByClassName("works-nav-circle")
 const worksImg = document.getElementsByClassName("laptop-img")
 const worksContent = document.getElementsByClassName("works-content")
+const form = document.getElementById("contact-form")
 
+let currCard = 0;
 
-let currCard = 0
-navCircles[0].style.opacity = "100%"
-worksImg[1].style.opacity = "0%"
-worksNavCircles[0].style.opacity = "100%"
 animateAbout()
-
 const navCircleClickHandler = index => {
     sectionContainer[0].style.transitionDelay = "1000ms"
     sectionContainer[0].style.transform = `translateY(-${index * HEIGHT}px)`
     for(let i = 0; i < navCircles.length; i++){
-        if(i === index) navCircles[i].style.opacity = "100%"
-        if(i !== index) navCircles[i].style.opacity = "50%"
+        if(i === index) navCircles[i].classList.add("active")
+        if(i !== index) navCircles[i].classList.remove("active")
     }
     if(index === 0){
         deanimateSkills()
@@ -66,17 +63,20 @@ const worksNavCircleClickHandler = index => {
         animateCard(1)
     }
         
-    for(let i = 0; i < 2; i++){
+    for(let i = 0; i < worksNavCircles.length; i++){
         if(index === i){
             worksImg[i].style.opacity = "100%"
-            worksNavCircles[i].style.opacity = "100%"
+            worksNavCircles[i].classList.add("active")
         }else{
             worksImg[i].style.opacity = "0%"
-            worksNavCircles[i].style.opacity = "50%"
+            worksNavCircles[i].classList.remove("active")
         }
     }
 }
 
+function formSubmitHandler(event){
+    event.preventDefault()
+}
 for(let i = 0; i < navCircles.length; i++) {
     navCircles[i].addEventListener("click",() =>  navCircleClickHandler(i))
 }
@@ -84,3 +84,5 @@ for(let i = 0; i < navCircles.length; i++) {
 for(let i = 0; i < worksNavCircles.length; i++){
     worksNavCircles[i].addEventListener("click", () => worksNavCircleClickHandler(i))
 }
+
+//form.addEventListener('submit', formSubmitHandler)

@@ -47,25 +47,9 @@ h1 {
 
 .background {
   position: absolute;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: radial-gradient(#434343 0%, #0a0a0a 100%);
-}
-
-.background-top {
-  position: absolute;
-  top: 0;
-  right: 0;
-  max-width: 1102px;
-  max-height: 614px;
-}
-
-.background-bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  max-width: 1467px;
-  max-height: 594px;
 }
 
 .introduction {
@@ -150,6 +134,11 @@ h1 {
   margin-left: 16px;
   width: 40px;
   height: 40px;
+  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.25));
+  cursor: pointer;
+}
+.github:hover {
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.5));
 }
 
 @media (max-width: 1200px) {
@@ -380,8 +369,14 @@ h1 {
   opacity: 50%;
   cursor: pointer;
   transition: opacity 200ms ease-in-out;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
 }
 .works-nav-circle:hover {
+  opacity: 100%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.works-nav-circle.active {
   opacity: 100%;
 }
 
@@ -488,7 +483,8 @@ input:focus {
   border-color: rgba(255, 255, 255, 0.9);
 }
 input::placeholder {
-  color: white;
+  color: #0a0a0a;
+  opacity: 50%;
 }
 
 textarea {
@@ -510,7 +506,8 @@ textarea:focus {
   border-color: rgba(255, 255, 255, 0.9);
 }
 textarea::placeholder {
-  color: white;
+  color: #0a0a0a;
+  opacity: 50%;
 }
 
 #submit {
@@ -560,8 +557,14 @@ textarea::placeholder {
   opacity: 50%;
   cursor: pointer;
   transition: opacity 200ms ease-in-out;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
 }
 .nav-circle:hover {
+  opacity: 100%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.nav-circle.active {
   opacity: 100%;
 }
 
@@ -584,15 +587,20 @@ button {
   font-weight: 600;
   text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+  outline: none;
+  cursor: pointer;
+}
+button:hover, button:focus {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-.primary-button {
+.button.primary {
   border: none;
   background-color: #ffa366;
   color: white;
 }
 
-.secondary-button {
+.button.secondary {
   margin-top: 20px;
   border-width: 8px;
   border-style: solid;
