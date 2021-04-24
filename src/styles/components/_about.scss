@@ -8,14 +8,6 @@
     overflow: hidden;
 }
 
-.about-h1{
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform-origin: top left;
-    transform: rotate(90deg) translateY(-178px) translateX(640px);
-}
-
 .about-circle{
     position: absolute;
     bottom: 0;
@@ -47,12 +39,22 @@
     align-items: flex-end;
 }
 
-.text-container{
-    h3{
-        margin-left: 128px;
-        margin-bottom: 45px;
-    }
+.header-container{
+    margin-left: 128px;
+    margin-bottom: 45px;
 }
+
+#header-2{
+    color: $complementary;
+}
+#line{
+    display: inline-block;
+    width: 6px;
+    background-color: $dark;
+    height: 40px;
+    opacity: 100%;
+}
+
 .about-p{
     width: 660px;
     transform: translateX(960px);
@@ -78,12 +80,6 @@
 }
 
 @media (max-width: $tablet){
-    .about{
-        h1{
-            transform: rotate(90deg) translateY(-148px);
-        }
-    }
-
     .about-img{
         width: 400px;
     }
@@ -93,23 +89,17 @@
         height: 440px;
     }
     
-    .text-container{
-        p{
-            width: 600px;
-        }
+    
+    .about-p{
+        width: 600px;
     }
+
     .about-content{
         padding: 48px;
     }
 }
 
 @media (max-width: $mobile){
-    .about{
-        h1{
-            transform: rotate(90deg) translateY(-118px);
-        }
-    }
-
     .about-img{
         width: 280px;
     }
@@ -122,14 +112,14 @@
         justify-content: flex-start;
         padding: 64px;
     }
-    .text-container{
-        h3{
-            margin-left: 0px;
-            margin-bottom: 20px;
-        }
-        p{
-            width: auto;
-        }
+   
+    .about-p{
+        width: auto;
+    }
+    
+    .header-container{
+        margin-left: 0px;
+        margin-bottom: 20px;
     }
 
     .github{

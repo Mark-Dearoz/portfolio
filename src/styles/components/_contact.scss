@@ -7,14 +7,6 @@
     align-items: center;
     z-index: 1000;
 }
-.contact-h1{
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform-origin: top left;
-    transition: transform 200ms ease-in-out;
-    transform: rotate(90deg) translateY(-178px) translateX(640px);
-}
 
 .contact-content{
     width: 100%;
@@ -86,18 +78,12 @@ textarea{
 }
 
 @media (max-width: $tablet){
-    .contact-h1{
-        transform: rotate(90deg) translateY(-148px) translateX(640px);
-    }
     .contact-content{
         padding: 48px;
     }
 }
 
 @media (max-width: $mobile){
-    .contact-h1{
-        transform: rotate(90deg) translateY(-118px) translateX(640px);
-    }
     .contact-content{
         padding: 32px;
     }

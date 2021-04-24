@@ -3,17 +3,20 @@ import {animateSkills, deanimateSkills} from './animations/skills.js'
 import {animateWorks, deanimateWorks} from './animations/works.js'
 import {animateCard, deanimateCard} from './animations/works.js'
 import {animateContact, deanimateContact} from './animations/contact.js'
+import {animateTyping, deanimateTyping} from './animations/typing.js'
 
 const HEIGHT = 640;
+const firstWord = "I am "
+const secondWords = ["creative", "intelligent", "hardworking"]
 const navCircles = document.getElementsByClassName("nav-circle")
 const sectionContainer = document.getElementsByClassName("section-container")
 const worksNavCircles = document.getElementsByClassName("works-nav-circle")
 const worksImg = document.getElementsByClassName("laptop-img")
 const worksContent = document.getElementsByClassName("works-content")
-const form = document.getElementById("contact-form")
 
 let currCard = 0;
 
+animateTyping(firstWord, secondWords)
 animateAbout()
 const navCircleClickHandler = index => {
     sectionContainer[0].style.transitionDelay = "1000ms"
@@ -27,23 +30,27 @@ const navCircleClickHandler = index => {
         deanimateWorks(currCard)
         deanimateContact()
         animateAbout()
+        animateTyping("I am ", ["creative", "intelligent", "hardworker"])
     }
     if(index === 1){
         deanimateAbout()
         deanimateWorks(currCard)
         deanimateContact()
+        deanimateTyping()
         animateSkills()
     }
     if(index === 2){
         deanimateAbout()
         deanimateSkills()
         deanimateContact()
+        deanimateTyping()
         animateWorks(currCard)
     }
     if(index === 3){
         deanimateAbout()
         deanimateSkills()
         deanimateWorks(currCard)
+        deanimateTyping()
         animateContact()
     }
 }
@@ -74,9 +81,7 @@ const worksNavCircleClickHandler = index => {
     }
 }
 
-function formSubmitHandler(event){
-    event.preventDefault()
-}
+
 for(let i = 0; i < navCircles.length; i++) {
     navCircles[i].addEventListener("click",() =>  navCircleClickHandler(i))
 }
@@ -84,5 +89,3 @@ for(let i = 0; i < navCircles.length; i++) {
 for(let i = 0; i < worksNavCircles.length; i++){
     worksNavCircles[i].addEventListener("click", () => worksNavCircleClickHandler(i))
 }
-
-//form.addEventListener('submit', formSubmitHandler)

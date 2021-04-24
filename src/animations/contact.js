@@ -1,6 +1,6 @@
 import {animateH1, deanimateH1} from './h1.js'
 
-const [h1] = document.getElementsByClassName("contact-h1")
+const title = document.getElementById("contact-title")
 const inputField = document.getElementsByClassName("input-field")
 const button = document.getElementById("submit")
 
@@ -8,12 +8,12 @@ const button = document.getElementById("submit")
 export const animateContact = () => {
     animateInputField()
     animateButton()
-    animateH1(h1)
+    animateH1(title)
 }
 export const deanimateContact = () => {
     deanimateInputField()
     deanimateButton()
-    deanimateH1(h1)
+    deanimateH1(title)
 }
 
 

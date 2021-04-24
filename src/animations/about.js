@@ -1,15 +1,16 @@
 import {animateH1, deanimateH1} from './h1.js'
 
-const [h1] = document.getElementsByClassName("about-h1")
+const title = document.getElementById("about-title")
 const [p] = document.getElementsByClassName("about-p")
 const [buttonContainer] = document.getElementsByClassName("button-container")
 const [circle] = document.getElementsByClassName("about-circle")
 const [img] = document.getElementsByClassName("about-img")
 
+
 export const animateAbout = () => {
     animateButtonContainer()
     animateCircle()
-    animateH1(h1)
+    animateH1(title)
     animateImg()
     animateP()
 }
@@ -17,7 +18,7 @@ export const animateAbout = () => {
 export const deanimateAbout = () => {
     deanimateButtonContainer()
     deanimateCircle()
-    deanimateH1(h1)
+    deanimateH1(title)
     deanimateImg()
     deanimateP()
 }

@@ -7,14 +7,6 @@
     align-items: center;
 }
 
-.skills-h1{
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform-origin: top left;
-    transition: transform 200ms ease-in-out;    
-    transform: rotate(90deg) translateY(-178px) translateX(640px);
-}
 .skills-content{
     position: absolute;
     top: 0;
@@ -54,10 +46,6 @@
 }
 
 @media (max-width: $tablet){
-    
-    .skills-h1 {
-        transform: rotate(90deg) translateY(-148px) translateX(640px);
-    }
     .skills-content{
         padding: 48px;
     }
@@ -68,10 +56,6 @@
 }
 
 @media (max-width: $mobile){
-    
-    .skills-h1 {
-        transform: rotate(90deg) translateY(-118px) translateX(640px);
-    }
     .skills-content{
         padding: 128px 8px;
         grid-template-columns: 1fr 1fr;

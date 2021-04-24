@@ -8,13 +8,6 @@
     align-items: center;
 }
 
-.works-h1{
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform-origin: top left;
-    transform: rotate(90deg) translateY(-178px) translateX(640px);
-}
 .works-circle{
     position: absolute;
     right: 64px;
@@ -96,11 +89,6 @@
 }
 
 @media (max-width: $tablet){
-    .works{
-        h1{
-            transform: rotate(90deg) translateY(-148px);
-        }
-    }
     .works-content{
         padding: 48px;
     }
@@ -113,11 +101,6 @@
 }
 
 @media (max-width: $mobile){
-    .works{
-        h1{
-            transform: rotate(90deg) translateY(-118px);
-        }
-    }
     .works-content{
         padding: 8px;
     }

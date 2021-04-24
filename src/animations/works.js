@@ -1,7 +1,6 @@
 import {animateH1, deanimateH1} from './h1.js'
 
-const [h1] = document.getElementsByClassName("works-h1")
-const laptopImg = document.getElementsByClassName("laptop-img")
+const worksTitle = document.getElementById("works-title")
 const title = document.getElementsByClassName("work-title")
 const description = document.getElementsByClassName("work-description")
 const links = document.getElementsByClassName("work-links")
@@ -20,12 +19,12 @@ export const deanimateCard = index =>{
 
 export const animateWorks = index => {
     animateCard(index)
-    animateH1(h1)
+    animateH1(worksTitle)
 }
 
 export const deanimateWorks = index => {
     deanimateCard(index)
-    deanimateH1(h1)
+    deanimateH1(worksTitle)
 }
 
 function animateTitle(index){

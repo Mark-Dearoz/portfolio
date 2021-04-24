@@ -26,8 +26,8 @@
         </section>
 
         <section class="introduction">
-            <h2>Hi, I'm Mark Dearoz</h2>
-            <h2>I am a Software Developer</h2>
+            <h2 class="h2">Hi, I'm Mark Dearoz</h2>
+            <h2 class="h2">I am a Software Developer</h2>
             <button class="secondary-button">Learn More About Me</button>
         </section>
 
@@ -38,13 +38,17 @@
                     <section class="about">
                         <div class="content-container">
                             <div class="about-circle"></div>
-                            <h1 class="about-h1">About</h1>
+                            <h1 id="about-title" class="title h1">About</h1>
                             <img class="about-img" src="../src/img/about-image.png">
 
                             <div class="about-content">
                                 <div class="text-container">
-                                    <h3>I am Creative</h3>
-                                    <p class="about-p">
+                                    <div class="header-container">
+                                        <span id="header-1" class="h3"></span>
+                                        <span id="header-2" class="h3"></span>
+                                        <span id="line"></span>
+                                    </div>
+                                    <p class="about-p p">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit nibh eu laoreet pulvinar. 
                                         Vestibulum in vestibulum est. Nullam eget leo interdum, consectetur nunc id, ultrices orci. 
                                         Etiam rhoncus maximus elit. Vestibulum in vestibulum est. Nullam eget leo interdum, consectetur nunc id, ultrices orci 
@@ -71,45 +75,45 @@
                     
                     <section class="skills">
                         <div class="content-container">
-                            <h1 class="skills-h1">Skills</h1>
+                            <h1 id="skills-title" class="title h1">Skills</h1>
                             <div class="skills-content">
                                 <div class="circle-container">
-                                    <h3 class="circle-title">Javascript</h3>
+                                    <h3 class="circle-title h3">Javascript</h3>
                                     <svg class="circle-bar" viewBox="0 0 248 248">
                                         <circle stroke="#000000" stroke-opacity="0.2" stroke-width="24" fill="transparent" r="100" cx="124" cy="124"/>
                                         <circle class="circle-progress" stroke-linecap="round" stroke="#FFA366" fill="transparent" stroke-width="24" r="100" cx="124" cy="124"/>
                                     </svg>
                                 </div>
                                 <div class="circle-container">
-                                    <h3 class="circle-title">React</h3>
+                                    <h3 class="circle-title h3">React</h3>
                                     <svg class="circle-bar" viewBox="0 0 248 248">
                                         <circle stroke="#000000" stroke-opacity="0.2" stroke-width="24" fill="transparent" r="100" cx="124" cy="124"/>
                                         <circle class="circle-progress" stroke-linecap="round" stroke="#FFA366" fill="transparent" stroke-width="24" r="100" cx="124" cy="124"/>
                                     </svg>
                                 </div>
                                 <div class="circle-container">
-                                    <h3 class="circle-title">HTML</h3>
+                                    <h3 class="circle-title h3">HTML</h3>
                                     <svg class="circle-bar" viewBox="0 0 248 248">
                                         <circle stroke="#000000" stroke-opacity="0.2" stroke-width="24" fill="transparent" r="100" cx="124" cy="124"/>
                                         <circle class="circle-progress" stroke-linecap="round" stroke="#FFA366" fill="transparent" stroke-width="24" r="100" cx="124" cy="124"/>
                                     </svg>
                                 </div>
                                 <div class="circle-container">
-                                    <h3 class="circle-title">CSS</h3>
+                                    <h3 class="circle-title h3">CSS</h3>
                                     <svg class="circle-bar" viewBox="0 0 248 248">
                                         <circle stroke="#000000" stroke-opacity="0.2" stroke-width="24" fill="transparent" r="100" cx="124" cy="124"/>
                                         <circle class="circle-progress" stroke-linecap="round" stroke="#FFA366" fill="transparent" stroke-width="24" r="100" cx="124" cy="124"/>
                                     </svg>
                                 </div>
                                 <div class="circle-container">
-                                    <h3 class="circle-title">Node.js</h3>
+                                    <h3 class="circle-title h3">Node.js</h3>
                                     <svg class="circle-bar" viewBox="0 0 248 248">
                                         <circle stroke="#000000" stroke-opacity="0.2" stroke-width="24" fill="transparent" r="100" cx="124" cy="124"/>
                                         <circle class="circle-progress" stroke-linecap="round" stroke="#FFA366" fill="transparent" stroke-width="24" r="100" cx="124" cy="124"/>
                                     </svg>
                                 </div>
                                 <div class="circle-container">
-                                    <h3 class="circle-title">Java</h3>
+                                    <h3 class="circle-title h3">Java</h3>
                                     <svg class="circle-bar" viewBox="0 0 248 248">
                                         <circle stroke="#000000" stroke-opacity="0.2" stroke-width="24" fill="transparent" r="100" cx="124" cy="124"/>
                                         <circle class="circle-progress" stroke-linecap="round" stroke="#FFA366" fill="transparent" stroke-width="24" r="100" cx="124" cy="124"/>
@@ -122,7 +126,7 @@
                     <section class="works">
                         <div class="content-container">
                             
-                            <h1 class="works-h1">Works</h1>
+                            <h1 id="works-title" class="title h1">Works</h1>
                             <div class="works-circle"></div>
                             
                             <img class="laptop-img" src="../src/img/fitness-tracker.png"/>
@@ -133,8 +137,8 @@
                             <div class="works-content">
                                 <div class="works-card">
                                     <div class="work-content">
-                                        <h3 class="work-title">Fitness Tracker</h3>
-                                        <p class="work-description">
+                                        <h3 class="work-title h3">Fitness Tracker</h3>
+                                        <p class="work-description p">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                                             Integer hendrerit nibh eu laoreet pulvinar. Vestibulum in vestibulum est. 
                                             Nullam eget leo interdum, consectetur nunc id, ultrices orci.
@@ -159,8 +163,8 @@
 
                                 <div class="works-card">
                                     <div class="work-content">
-                                        <h3 class="work-title">Portfolio</h3>
-                                        <p class="work-description">
+                                        <h3 class="work-title h3">Portfolio</h3>
+                                        <p class="work-description p">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                                             Integer hendrerit nibh eu laoreet pulvinar. Vestibulum in vestibulum est. 
                                             Nullam eget leo interdum, consectetur nunc id, ultrices orci.
@@ -193,7 +197,7 @@
                     
                     <section class="contact">
                         <div class="content-container">
-                            <h1 class="contact-h1">Contact</h1>
+                            <h1 id="contact-title" class="title h1">Contact</h1>
 
                             <div class="contact-content">
                                 <form id="contact-form" action="https://formsubmit.co/markdearoz08@gmail.com" method="POST" autocomplete="off">

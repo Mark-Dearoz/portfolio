@@ -1,0 +1,21 @@
+@use '../abstract/' as *;
+
+.title{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: top left;
+    transform: rotate(90deg) translateY(-178px) translateX(640px);
+}
+
+@media (max-width: $tablet){
+    .title{
+        transform: rotate(90deg) translateY(-148px);
+    }
+}
+
+@media (max-width: $mobile){
+    .title{
+        transform: rotate(90deg) translateY(-118px);
+    }
+}

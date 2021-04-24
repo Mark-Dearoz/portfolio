@@ -1,6 +1,6 @@
 import {animateH1, deanimateH1} from './h1.js'
 
-const [h1] = document.getElementsByClassName("skills-h1")
+const title = document.getElementById("skills-title")
 const circleBars = document.getElementsByClassName("circle-bar")
 const circleProgressBars = document.getElementsByClassName("circle-progress")
 const circleTitles = document.getElementsByClassName("circle-title")
@@ -12,14 +12,14 @@ export const animateSkills = () =>{
     animateCircleProgressBars()
     animateCircleTitles()
     animateCircleBars()
-    animateH1(h1)
+    animateH1(title)
 }
 
 export const deanimateSkills = () => {
     deanimateCircleProgressBars()
     deanimateCircleTitles()
     deanimateCircleBars()
-    deanimateH1(h1)
+    deanimateH1(title)
 }
 
 

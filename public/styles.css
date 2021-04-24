@@ -12,7 +12,7 @@ html {
     font-size: 16px;
   }
 }
-p {
+.p {
   font-size: 1rem;
   font-weight: 400;
   color: white;
@@ -21,23 +21,23 @@ p {
 }
 
 @media (max-width: 600px) {
-  p {
+  .p {
     line-height: 20px;
   }
 }
-h3 {
+.h3 {
   font-size: 2rem;
   font-weight: 600;
   text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
 }
 
-h2 {
+.h2 {
   font-size: 4rem;
   font-weight: 600;
   text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
 }
 
-h1 {
+.h1 {
   font-size: 8rem;
   font-weight: 700;
   color: #0a0a0a;
@@ -74,14 +74,6 @@ h1 {
   overflow: hidden;
 }
 
-.about-h1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform-origin: top left;
-  transform: rotate(90deg) translateY(-178px) translateX(640px);
-}
-
 .about-circle {
   position: absolute;
   bottom: 0;
@@ -112,9 +104,21 @@ h1 {
   align-items: flex-end;
 }
 
-.text-container h3 {
+.header-container {
   margin-left: 128px;
   margin-bottom: 45px;
+}
+
+#header-2 {
+  color: #ffa366;
+}
+
+#line {
+  display: inline-block;
+  width: 6px;
+  background-color: #0a0a0a;
+  height: 40px;
+  opacity: 100%;
 }
 
 .about-p {
@@ -142,10 +146,6 @@ h1 {
 }
 
 @media (max-width: 1200px) {
-  .about h1 {
-    transform: rotate(90deg) translateY(-148px);
-  }
-
   .about-img {
     width: 400px;
   }
@@ -155,7 +155,7 @@ h1 {
     height: 440px;
   }
 
-  .text-container p {
+  .about-p {
     width: 600px;
   }
 
@@ -164,10 +164,6 @@ h1 {
   }
 }
 @media (max-width: 600px) {
-  .about h1 {
-    transform: rotate(90deg) translateY(-118px);
-  }
-
   .about-img {
     width: 280px;
   }
@@ -182,12 +178,13 @@ h1 {
     padding: 64px;
   }
 
-  .text-container h3 {
+  .about-p {
+    width: auto;
+  }
+
+  .header-container {
     margin-left: 0px;
     margin-bottom: 20px;
-  }
-  .text-container p {
-    width: auto;
   }
 
   .github {
@@ -200,15 +197,6 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.skills-h1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform-origin: top left;
-  transition: transform 200ms ease-in-out;
-  transform: rotate(90deg) translateY(-178px) translateX(640px);
 }
 
 .skills-content {
@@ -254,10 +242,6 @@ h1 {
 }
 
 @media (max-width: 1200px) {
-  .skills-h1 {
-    transform: rotate(90deg) translateY(-148px) translateX(640px);
-  }
-
   .skills-content {
     padding: 48px;
   }
@@ -268,10 +252,6 @@ h1 {
   }
 }
 @media (max-width: 600px) {
-  .skills-h1 {
-    transform: rotate(90deg) translateY(-118px) translateX(640px);
-  }
-
   .skills-content {
     padding: 128px 8px;
     grid-template-columns: 1fr 1fr;
@@ -289,14 +269,6 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.works-h1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform-origin: top left;
-  transform: rotate(90deg) translateY(-178px) translateX(640px);
 }
 
 .works-circle {
@@ -381,10 +353,6 @@ h1 {
 }
 
 @media (max-width: 1200px) {
-  .works h1 {
-    transform: rotate(90deg) translateY(-148px);
-  }
-
   .works-content {
     padding: 48px;
   }
@@ -398,10 +366,6 @@ h1 {
   }
 }
 @media (max-width: 600px) {
-  .works h1 {
-    transform: rotate(90deg) translateY(-118px);
-  }
-
   .works-content {
     padding: 8px;
   }
@@ -439,15 +403,6 @@ h1 {
   justify-content: center;
   align-items: center;
   z-index: 1000;
-}
-
-.contact-h1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform-origin: top left;
-  transition: transform 200ms ease-in-out;
-  transform: rotate(90deg) translateY(-178px) translateX(640px);
 }
 
 .contact-content {
@@ -515,19 +470,11 @@ textarea::placeholder {
 }
 
 @media (max-width: 1200px) {
-  .contact-h1 {
-    transform: rotate(90deg) translateY(-148px) translateX(640px);
-  }
-
   .contact-content {
     padding: 48px;
   }
 }
 @media (max-width: 600px) {
-  .contact-h1 {
-    transform: rotate(90deg) translateY(-118px) translateX(640px);
-  }
-
   .contact-content {
     padding: 32px;
   }
@@ -657,6 +604,24 @@ button:hover, button:focus {
   transform: translateY(0px);
 }
 
+.title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: top left;
+  transform: rotate(90deg) translateY(-178px) translateX(640px);
+}
+
+@media (max-width: 1200px) {
+  .title {
+    transform: rotate(90deg) translateY(-148px);
+  }
+}
+@media (max-width: 600px) {
+  .title {
+    transform: rotate(90deg) translateY(-118px);
+  }
+}
 * {
   margin: 0;
   padding: 0;
