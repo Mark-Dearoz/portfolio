@@ -60,10 +60,14 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  opacity: 0%;
+  text-align: center;
 }
-.introduction h2 {
-  margin-bottom: 21px;
+.introduction span {
+  color: white;
+}
+
+#name {
+  color: #ffa366;
 }
 
 .about {
@@ -118,7 +122,7 @@ html {
   width: 6px;
   background-color: #0a0a0a;
   height: 40px;
-  opacity: 100%;
+  opacity: 0%;
 }
 
 .about-p {
@@ -484,6 +488,9 @@ textarea::placeholder {
   width: 100vw;
   height: 100vh;
   z-index: 100;
+  display: none;
+  opacity: 0%;
+  transition: opacity 1000ms ease-in-out;
 }
 
 .nav-circle-container {
@@ -540,6 +547,13 @@ button {
 button:hover, button:focus {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
+button:disabled {
+  box-shadow: none;
+  cursor: default;
+}
+button:disabled:hover, button:disabled:hover {
+  box-shadow: none;
+}
 
 .button.primary {
   border: none;
@@ -554,15 +568,27 @@ button:hover, button:focus {
   border-color: #ffa366;
   color: #ffa366;
   background-color: rgba(0, 0, 0, 0);
+  transition: background-color 250ms ease-in-out;
+  transition: color 250ms ease-in-out;
+}
+.button.secondary:hover, .button.secondary:focus {
+  background-color: #ffa366;
+  color: white;
+}
+.button.secondary:disabled:hover, .button.secondary:disabled:focus {
+  background-color: rgba(0, 0, 0, 0);
+  color: #ffa366;
 }
 
 .paper-container {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
+  opacity: 0%;
+  transition: opacity 1000ms ease-in-out;
 }
 
 .paper {
@@ -586,7 +612,9 @@ button:hover, button:focus {
 .view-container {
   width: 100vw;
   height: 100vh;
-  display: flex;
+  display: none;
+  opacity: 0%;
+  transition: opacity 1000ms ease-in-out;
   justify-content: center;
   align-items: center;
 }

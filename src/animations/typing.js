@@ -1,52 +1,93 @@
 
-
-const header1 = document.getElementById("header-1")
-const header2 = document.getElementById("header-2")
-
-let index
-let wordIndex
-let wordsIndex
-let forward
 let interval
+let elementsIndex 
+let wordsIndex
+let letterIndex
 
-const typeSecondWord = words => {
+let lastWordsIndex
+let lastWordIndex
+let directionForward
 
-    if(words[wordsIndex].length === wordIndex - 1) forward = false
-    if(wordIndex === 0){
-        forward = true
-        if(wordsIndex === words.length-1) wordsIndex = 0
-        if(wordsIndex !== words.length -1) wordsIndex++
+const typeLastWords = (element, words) => {
+    if(words[lastWordsIndex].length === lastWordIndex - 1) directionForward = false
+    if(lastWordIndex === 0){
+        directionForward = true
+        if(lastWordsIndex === words.length-1) lastWordsIndex = 0
+        if(lastWordsIndex !== words.length -1) lastWordsIndex++
     }
-    header2.innerHTML = words[wordsIndex].substring(0,wordIndex)
-    if(forward) wordIndex++
-    if(!forward) wordIndex--
+    element.innerHTML = words[lastWordsIndex].substring(0,lastWordIndex)
+    if(directionForward) lastWordIndex++
+    if(!directionForward) lastWordIndex--
 
 }
 
-const typeFirstWord = (word1, words) => {
+const typeWord = (elements, words, animationDelay) => {
+    if(words[elementsIndex] === undefined) return clearInterval(interval)
 
-    if(index === word1.length + 1) {
+    if(Array.isArray(words[wordsIndex])) {
         clearInterval(interval)
-        interval = setInterval(() => typeSecondWord(words),200)
+        lastWordsIndex = 0
+        lastWordIndex = 1
+        directionForward = true
+        interval = setInterval(() => typeLastWords(elements[elementsIndex], words[wordsIndex]),animationDelay)
+    }else{
+        elements[elementsIndex].innerHTML = words[wordsIndex].substring(0,letterIndex) 
     }
-    header1.innerHTML = word1.substring(0,index)
-    index++
-}
 
-export const animateTyping = (word1, words) => {
-    index = 1
-    wordIndex = 1
-    wordsIndex = 0
-    forward = true
-    setTimeout(() =>{
-        interval = setInterval(() => typeFirstWord(word1, words),200)
-    }, 1000)
+    
+    if(letterIndex === words[wordsIndex].length){
+        elementsIndex++
+        wordsIndex++
+        letterIndex = 0
+    }
+    
+    letterIndex++
     
 }
 
-export const deanimateTyping = () => {
-    header1.innerHTML = ""
-    header2.innerHTML = ""
+export const animateTyping = (elements, words, startDelay=0, animationDelay=0) => {
+    elementsIndex = 0
+    wordsIndex = 0
+    letterIndex = 1
     clearInterval(interval)
+    setTimeout(() =>{
+        interval = setInterval(() => typeWord(elements, words, animationDelay),animationDelay)
+    }, startDelay)
+    
 }
 
+
+const eraseWord = (elements, words) => {
+    
+    if(Array.isArray(words[words.length - 1])){
+        elements[elementsIndex].innerHTML = words[words.length-1][lastWordsIndex].substring(0, lastWordIndex)
+        lastWordIndex--
+        if(lastWordIndex == 0) {
+            elementsIndex--
+            letterIndex = words[words.length - 2]
+            wordsIndex = words.length - 2
+        }
+    }else{
+        if(words[wordsIndex] === undefined) return clearInterval(interval)
+        elements[elementsIndex].innerHTML = words[wordsIndex].substring(0, letterIndex)
+        if(letterIndex === 0){
+            elementsIndex--
+            wordsIndex--
+            if(wordsIndex >=0) letterIndex = words[wordsIndex].length
+        }
+        letterIndex--
+        
+    }
+    
+}
+export const deanimateTyping = (elements, words, animationDelay) => {
+    elementsIndex = elements.length - 1
+    wordsIndex--
+    letterIndex = words[wordsIndex].length - 1
+    clearInterval(interval)
+    interval = setInterval(() => eraseWord(elements, words), animationDelay)
+}
+
+export const stopAnimation = () =>{
+    clearInterval(interval)
+}

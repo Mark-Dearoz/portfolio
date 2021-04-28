@@ -4,9 +4,11 @@
     position: absolute;
     width: 100vw;
     height: 100vh;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
+    opacity: 0%;
+    transition: opacity 1000ms ease-in-out;
 }
 .paper{
     position: relative;
@@ -29,7 +31,9 @@
 .view-container{
     width: 100vw;
     height: 100vh;
-    display: flex;
+    display: none;
+    opacity: 0%;
+    transition: opacity 1000ms ease-in-out;
     justify-content: center;
     align-items: center;
 }

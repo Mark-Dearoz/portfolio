@@ -5,6 +5,9 @@
     width: 100vw;
     height: 100vh;
     z-index: 100;
+    display: none;
+    opacity: 0%;
+    transition: opacity 1000ms ease-in-out;
 }
 
 .nav-circle-container{

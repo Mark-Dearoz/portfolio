@@ -5,19 +5,30 @@ import {animateCard, deanimateCard} from './animations/works.js'
 import {animateContact, deanimateContact} from './animations/contact.js'
 import {animateTyping, deanimateTyping} from './animations/typing.js'
 
+
 const HEIGHT = 640;
-const firstWord = "I am "
-const secondWords = ["creative", "intelligent", "hardworking"]
+const WORDS = ["Hi I'm ", "Mark Dearoz", "I am a Software Developer"]
+const START_DELAY = 0
+const ANIMATION_DELAY = 100
+
 const navCircles = document.getElementsByClassName("nav-circle")
 const sectionContainer = document.getElementsByClassName("section-container")
 const worksNavCircles = document.getElementsByClassName("works-nav-circle")
 const worksImg = document.getElementsByClassName("laptop-img")
 const worksContent = document.getElementsByClassName("works-content")
+const [viewContainer] = document.getElementsByClassName("view-container")
+const [nav] = document.getElementsByClassName("nav")
+const [paper] = document.getElementsByClassName("paper-container")
+const intro = document.getElementsByClassName("intro")
+const introButton = document.getElementById("intro-button")
 
 let currCard = 0;
 
-animateTyping(firstWord, secondWords)
-animateAbout()
+setTimeout(() => {
+    introButton.disabled = false
+}, 4500) 
+animateTyping(intro, WORDS, START_DELAY, ANIMATION_DELAY)
+
 const navCircleClickHandler = index => {
     sectionContainer[0].style.transitionDelay = "1000ms"
     sectionContainer[0].style.transform = `translateY(-${index * HEIGHT}px)`
@@ -30,27 +41,23 @@ const navCircleClickHandler = index => {
         deanimateWorks(currCard)
         deanimateContact()
         animateAbout()
-        animateTyping("I am ", ["creative", "intelligent", "hardworker"])
     }
     if(index === 1){
         deanimateAbout()
         deanimateWorks(currCard)
         deanimateContact()
-        deanimateTyping()
         animateSkills()
     }
     if(index === 2){
         deanimateAbout()
         deanimateSkills()
         deanimateContact()
-        deanimateTyping()
         animateWorks(currCard)
     }
     if(index === 3){
         deanimateAbout()
         deanimateSkills()
         deanimateWorks(currCard)
-        deanimateTyping()
         animateContact()
     }
 }
@@ -82,6 +89,20 @@ const worksNavCircleClickHandler = index => {
 }
 
 
+introButton.addEventListener("click", () =>{
+    deanimateTyping(intro, WORDS, ANIMATION_DELAY)
+    viewContainer.style.display = "flex"
+    nav.style.display = "block"
+    paper.style.display = "flex"
+    setTimeout(() => {
+        animateAbout()
+        viewContainer.style.opacity = "100%"
+        paper.style.opacity = "100%"
+        nav.style.opacity = "100%"
+        introButton.style.display = "none"
+    }, 4500)
+    
+})
 for(let i = 0; i < navCircles.length; i++) {
     navCircles[i].addEventListener("click",() =>  navCircleClickHandler(i))
 }
