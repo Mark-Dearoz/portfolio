@@ -650,6 +650,33 @@ button:disabled:hover, button:disabled:hover {
     transform: rotate(90deg) translateY(-118px);
   }
 }
+.thank-you-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.thank-you-container h2 {
+  color: white;
+  opacity: 0%;
+  animation: opacity 1000ms ease-in-out forwards 200ms;
+}
+.thank-you-container button {
+  opacity: 0%;
+  animation: opacity 1000ms ease-in-out forwards 500ms;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
 * {
   margin: 0;
   padding: 0;

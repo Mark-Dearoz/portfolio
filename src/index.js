@@ -29,6 +29,7 @@ setTimeout(() => {
 }, 4500) 
 animateTyping(intro, WORDS, START_DELAY, ANIMATION_DELAY)
 
+worksImg[1].style.opacity = "0%"
 const navCircleClickHandler = index => {
     sectionContainer[0].style.transitionDelay = "1000ms"
     sectionContainer[0].style.transform = `translateY(-${index * HEIGHT}px)`
