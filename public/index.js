@@ -1,9 +1,9 @@
-import {animateAbout, deanimateAbout} from './animations/about.js'
-import {animateSkills, deanimateSkills} from './animations/skills.js'
-import {animateWorks, deanimateWorks} from './animations/works.js'
-import {animateCard, deanimateCard} from './animations/works.js'
-import {animateContact, deanimateContact} from './animations/contact.js'
-import {animateTyping, deanimateTyping} from './animations/typing.js'
+import {animateAbout, deanimateAbout} from '../src/animations/about.js'
+import {animateSkills, deanimateSkills} from '../src/animations/skills.js'
+import {animateWorks, deanimateWorks} from '../src/animations/works.js'
+import {animateCard, deanimateCard} from '../src/animations/works.js'
+import {animateContact, deanimateContact} from '../src/animations/contact.js'
+import {animateTyping, deanimateTyping} from '../src/animations/typing.js'
 
 
 const HEIGHT = 640;
